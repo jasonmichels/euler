@@ -22,8 +22,8 @@ func NextDivisible(largest int, divisibleBy int) int {
 
 func sumOfDivisible(largest int, multiple int, channel chan int) {
 	nextDivisible := NextDivisible(largest, multiple)
-	divisibleBy := nextDivisible / multiple
-	channel <- divisibleBy * (nextDivisible + multiple) / 2
+	divisibleTimes := nextDivisible / multiple
+	channel <- divisibleTimes * (nextDivisible + multiple) / 2
 }
 
 // ProblemOneCalculated Solve project euler problem 1 building up a calculation. Fastest way to solve problem
