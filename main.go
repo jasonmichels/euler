@@ -3,10 +3,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/jasonmichels/euler/evenfib"
+	"github.com/jasonmichels/euler/primefactor"
 )
 
 func main() {
-	sum := evenfib.EvenFib(4000000)
-	fmt.Printf("Sum: %v \n", sum)
+	result := primefactor.IsPrime(3)
+	fmt.Println(result)
 }
