@@ -29,6 +29,8 @@ func sumOfDivisible(largest int, multiple int, channel chan int) {
 // ProblemOneCalculated Solve project euler problem 1 building up a calculation. Fastest way to solve problem
 func ProblemOneCalculated(largest int, multipleA int, multipleB int) int {
 
+	// This will run alot faster if I do not make it generic, and just to calculate for numbers under 1000
+	// But that would be no fun, and this way gives me an opportunity to create some benchmarks for different numbers
 	sumsC := make(chan int)
 	go sumOfDivisible(largest, multipleA, sumsC)
 	go sumOfDivisible(largest, multipleB, sumsC)
