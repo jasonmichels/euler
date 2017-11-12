@@ -3,10 +3,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/jasonmichels/euler/palindrome"
+	"github.com/jasonmichels/euler/smallestmultiple"
 )
 
 func main() {
-	result := palindrome.LargestPalindrome()
-	fmt.Printf("Largest: %v \n", result)
+	result := smallestmultiple.Naive()
+	fmt.Printf("Smallest Multiple: %v \n", result)
 }
