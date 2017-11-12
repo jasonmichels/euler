@@ -6,14 +6,13 @@ import (
 )
 
 // LargestPalindrome Find the largest palindrome made from the product of two 3-digit numbers
-func LargestPalindrome() int64 {
-	var largest int64
+func LargestPalindrome() int {
+	var largest int
 
 	for i := 999; i >= 100; i-- {
 		for j := i; j >= 100; j-- {
-			result := int64(i * j)
-
-			if IsPalindrome(result) {
+			result := i * j
+			if IsPalindrome(strconv.Itoa(result)) {
 				if result > largest {
 					largest = result
 					break
@@ -25,12 +24,9 @@ func LargestPalindrome() int64 {
 	return largest
 }
 
-// IsPalindrome Check if the integer is a palindrome
-func IsPalindrome(n int64) bool {
-	// The strategry is to convert int to string
-	// split the string in half, reverse the last half, then compare the strings
-
-	s := strconv.FormatInt(n, 10)
+// IsPalindrome Check if the string is a palindrome
+func IsPalindrome(s string) bool {
+	// Strategy is to split the string in half, reverse the last half, then compare the strings
 
 	if len(s) <= 1 {
 		return false
