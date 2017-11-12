@@ -27,3 +27,15 @@ func BenchmarkNaiveBetter(b *testing.B) {
 		NaiveBetter()
 	}
 }
+
+func TestWithLCMIsCorrect(t *testing.T) {
+	if result := WithLCM(); result != 232792560 {
+		t.Errorf("Did not expect to receive: %v", result)
+	}
+}
+
+func BenchmarkWithLCM(b *testing.B) {
+	for n := 0; n < b.N; n++ {
+		WithLCM()
+	}
+}

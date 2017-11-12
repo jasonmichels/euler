@@ -1,5 +1,9 @@
 package smallestmultiple
 
+import (
+	"github.com/jasonmichels/euler/lcm"
+)
+
 // Naive Find smallest multiple of numbers 1-20, naive solution
 func Naive() int {
 	//What is the smallest positive number that is evenly divisible by all of the numbers from 1 to 20?
@@ -45,4 +49,13 @@ func NaiveBetter() int {
 	}
 
 	return smallest
+}
+
+// WithLCM With Least common multiple function, and GCD function I added earlier
+func WithLCM() int {
+	var result = 11
+	for i := 11; i < 20; i++ {
+		result = lcm.LCM(result, i+1)
+	}
+	return result
 }
