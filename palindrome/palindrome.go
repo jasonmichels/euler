@@ -10,7 +10,7 @@ func LargestPalindrome() int64 {
 	var largest int64
 
 	for i := 999; i >= 100; i-- {
-		for j := 999; j >= 100; j-- {
+		for j := i; j >= 100; j-- {
 			result := int64(i * j)
 
 			if IsPalindrome(result) {
