@@ -3,10 +3,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/jasonmichels/euler/primefactor"
+	"github.com/jasonmichels/euler/palindrome"
 )
 
 func main() {
-	result := primefactor.IsPrime(3)
-	fmt.Println(result)
+	result := palindrome.LargestPalindrome()
+	fmt.Printf("Largest: %v \n", result)
 }
