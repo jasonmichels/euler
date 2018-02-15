@@ -3,10 +3,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/jasonmichels/euler/smallestmultiple"
+	"github.com/jasonmichels/euler/problem06"
 )
 
 func main() {
-	result := smallestmultiple.Naive()
-	fmt.Printf("Smallest Multiple: %v \n", result)
+	result := problem06.SumSquareDiff()
+	fmt.Printf("Sum of squares difference: %v \n", result)
 }
